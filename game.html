@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>game</title>
+<style>
+    .hi{
+        padding-left: 10px;
+      
+    }
+    .hiii button{
+        margin-left: 34px;
+    }
+
+</style>
+</head>
+<body>
+      <h1 class="hi">stone🪨 paper📃 scissor✂️</h1>
+     <button onclick="game('stone')">stone🪨</button>
+    <button onclick="game('paper')">paper📃 </button> <button onclick="game('scissor')">scissor✂️</button>
+    <h1 id="result"></h1>
+    
+    
+     <script>
+        function game(user){
+            const choices=['stone', 'paper','scissor']
+            let computer=choices[Math.floor(Math.random()*3)]
+            let result=''
+            if(user===computer){
+                result=`it is draw 👌`
+            }
+        else if  ((user===`stone`&& computer===`paper`)||(user===`paper`&& computer===`scissor` )|| (user===`rock` && computer===`paper`)) {
+                  result=`you lose💢😒 `
+              
+        }
+              else{
+                result=`you win 😍😘`
+              }
+            
+              document.getElementById('result').innerText=result
+            }
+     </script>
+  
+</body>
+
+        
+</html>

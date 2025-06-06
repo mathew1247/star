@@ -1,0 +1,8 @@
+@media ( max-width:468px) {
+    .media{
+        display: flex;
+       
+       color: aqua;
+    }
+    
+}
